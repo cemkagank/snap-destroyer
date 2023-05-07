@@ -2,7 +2,7 @@
 
 sudo apt-mark hold snapd
 
-snaps=$(snap list | awk '{print $2}')
+snaps=$(snap list | awk '{print $1}')
 for s in $snaps
 do 
     sudo snap remove --purge $s
